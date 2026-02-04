@@ -1,9 +1,0 @@
-✅ Login successful
-✅ Navigated to Bulk Scanning page
-Verifying disabled fields...
-✅ Description field is disabled
-✅ Category field is disabled
-✅ Notes field is disabled
-✅ DOB field is disabled
-✅ Last Name field is disabled
-✅ TC1-2 PASSED: All 5 required fields verified as disabled
