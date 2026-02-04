@@ -43,26 +43,59 @@ async function takeScreenshot() {
     });
 
     // Navigate to report
-    await page.goto(reportUrl, { waitUntil: 'networkidle' });
+    await page.goto(reportUrl, { waitUntil: 'load' });
 
     // Wait for the report to fully load
     console.log('⏳ Waiting for report to load...');
 
+    // Wait for Allure app to initialize
+    await page.waitForTimeout(2000);
+
     // Wait for specific Allure elements to be visible
     try {
-      await page.waitForSelector('.widget', { timeout: 10000 });
-      console.log('✓ Report widgets loaded');
+      // Wait for the main content area
+      await page.waitForSelector('.content', { timeout: 15000 });
+      console.log('✓ Content area loaded');
 
-      // Wait for charts to render
-      await page.waitForSelector('canvas, svg', { timeout: 10000 });
+      // Wait for widgets with actual data (statistics, trends, etc.)
+      await page.waitForSelector('.statistic__value', { timeout: 15000 });
+      console.log('✓ Statistics loaded');
+
+      // Wait for trend chart or other data visualizations
+      await page.waitForFunction(() => {
+        const charts = document.querySelectorAll('canvas, svg');
+        return charts.length > 0;
+      }, { timeout: 15000 });
       console.log('✓ Charts rendered');
 
-      // Additional wait for animations and final rendering
-      await page.waitForTimeout(2000);
+      // Wait for any loading spinners to disappear
+      await page.waitForFunction(() => {
+        const spinner = document.querySelector('.spinner, .loading');
+        return !spinner || spinner.style.display === 'none';
+      }, { timeout: 5000 }).catch(() => {
+        console.log('ℹ️  No spinner found (or already gone)');
+      });
+
+      // Final wait for all animations and data to settle
+      await page.waitForTimeout(3000);
+      console.log('✓ All data loaded and rendered');
 
     } catch (error) {
-      console.log('⚠️  Some elements took longer to load, proceeding with screenshot...');
+      console.log('⚠️  Some elements took longer to load:', error.message);
+      console.log('⚠️  Proceeding with screenshot anyway...');
+      await page.waitForTimeout(5000);
     }
+
+    // Debug: Log what's on the page
+    const hasContent = await page.evaluate(() => {
+      return {
+        hasWidgets: document.querySelectorAll('.widget').length,
+        hasStatistics: document.querySelectorAll('.statistic__value').length,
+        hasCharts: document.querySelectorAll('canvas, svg').length,
+        bodyText: document.body.innerText.substring(0, 200)
+      };
+    });
+    console.log('📊 Page content:', hasContent);
 
     // Take full page screenshot
     console.log('📸 Capturing screenshot...');
