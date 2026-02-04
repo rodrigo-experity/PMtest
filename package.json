@@ -37,7 +37,8 @@
     "@types/node": "^25.0.10",
     "allure-commandline": "^2.36.0",
     "allure-playwright": "^3.4.5",
-    "dotenv": "^16.6.1"
+    "dotenv": "^16.6.1",
+    "gh-pages": "^6.3.0"
   },
   "dependencies": {
     "canvas": "^3.2.1",
