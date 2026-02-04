@@ -47,7 +47,22 @@ async function takeScreenshot() {
 
     // Wait for the report to fully load
     console.log('⏳ Waiting for report to load...');
-    await page.waitForTimeout(3000); // Give time for charts to render
+
+    // Wait for specific Allure elements to be visible
+    try {
+      await page.waitForSelector('.widget', { timeout: 10000 });
+      console.log('✓ Report widgets loaded');
+
+      // Wait for charts to render
+      await page.waitForSelector('canvas, svg', { timeout: 10000 });
+      console.log('✓ Charts rendered');
+
+      // Additional wait for animations and final rendering
+      await page.waitForTimeout(2000);
+
+    } catch (error) {
+      console.log('⚠️  Some elements took longer to load, proceeding with screenshot...');
+    }
 
     // Take full page screenshot
     console.log('📸 Capturing screenshot...');
