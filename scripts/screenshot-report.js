@@ -13,7 +13,9 @@ const { createReadStream } = require('fs');
 const REPORT_DIR = 'allure-report';
 const SCREENSHOTS_DIR = 'report-screenshots';
 const PORT = 8765;
-const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
+// Create timestamp with date and time: YYYY-MM-DD_HH-MM-SS
+const now = new Date();
+const timestamp = now.toISOString().replace(/[:.]/g, '-').replace('T', '_').split('.')[0];
 const screenshotPath = path.join(SCREENSHOTS_DIR, `allure-report-${timestamp}.png`);
 
 // Simple HTTP server to serve static files
