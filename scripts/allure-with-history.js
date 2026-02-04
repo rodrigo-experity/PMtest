@@ -40,11 +40,12 @@ try {
     console.log('📋 Step 1: No previous history found (this is the first run)');
   }
 
-  // Step 2: Generate report WITHOUT --clean flag to preserve history
+  // Step 2: Generate report with --clean flag
   console.log('\n📋 Step 2: Generating Allure report...');
 
-  // Use allure generate without --clean
-  execSync('allure generate allure-results -o allure-report', {
+  // Use allure generate with --clean flag to overwrite existing report
+  // History is preserved because we already copied it to allure-results
+  execSync('allure generate allure-results --clean -o allure-report', {
     stdio: 'inherit',
     env: process.env
   });
