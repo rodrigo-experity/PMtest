@@ -25,7 +25,9 @@
     "test:dev": "npm run allure:env development && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
     "test:staging": "npm run allure:env staging && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
     "test:prod": "npm run allure:env production && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
-    "allure:publish": "node scripts/publish-report.js"
+    "allure:publish": "node scripts/publish-report.js",
+    "test:rcm:publish": "npm run test:rcm && npm run allure:generate:history && npm run allure:publish",
+    "test:patient:publish": "npm run test:patient && npm run allure:generate:history && npm run allure:publish"
   },
   "keywords": [],
   "author": "",
