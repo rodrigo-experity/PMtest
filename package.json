@@ -27,9 +27,11 @@
     "test:prod": "npm run allure:env production && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
     "allure:publish": "node scripts/publish-report.js",
     "allure:zip": "node scripts/zip-report.js",
+    "allure:screenshot": "node scripts/screenshot-report.js",
     "test:rcm:chromium": "npx playwright test tests/e2e/rcm-dashboard-e2e.spec.ts --project=chromium",
     "test:rcm:chromium:publish": "npm run test:rcm:chromium && npm run allure:generate:history && npm run allure:publish",
     "test:rcm:chromium:zip": "npm run test:rcm:chromium && npm run allure:generate:history && npm run allure:zip",
+    "test:rcm:chromium:screenshot": "npm run test:rcm:chromium && npm run allure:generate:history && npm run allure:screenshot",
     "test:rcm:publish": "npm run test:rcm && npm run allure:generate:history && npm run allure:publish",
     "test:patient:publish": "npm run test:patient && npm run allure:generate:history && npm run allure:publish"
   },
