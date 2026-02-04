@@ -1,0 +1,114 @@
+{
+  "inputs": [
+    {
+      "index": 0,
+      "id": "__VIEWSTATE",
+      "name": "__VIEWSTATE",
+      "type": "hidden",
+      "value": "PI0oGGHkrOQodc5Cl6jT8GwYjAH3rKayQRAff5fxo6gv9rsXzMYVF0VZ1GT1zib12MErgCjJXaow9/onyz+Igw5pnf3Z9XANjljI+bjl0TfVC9W7Grvd/JEaJpf4X0saVhJ8nsjXV+o4zPWygXXtaG81Wr4UkyeVkUWw6YujvJ1NU1kyrWL2ZvLMFrHc4hy/2555r1ySAZURlFxr7XHdFPcxi/iySyE3fGMs/lV2MqZ2+Lc8VAsCxGXiiUhBWmcG44TPSIzzjNGPxbWjFeyes6j0wA0PJzYB6cSq6DvmgVQE3e1WRGLuTSKiKoP/p2K+cklP/lmMDET+CKJuxyBhYK1JrmR/8MwL88jVPPCrcuORk046EGSCBN3ggAyaEr9ZdrGvIHvyngrc+8P1eHjL4A==",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 1,
+      "id": "__VIEWSTATEGENERATOR",
+      "name": "__VIEWSTATEGENERATOR",
+      "type": "hidden",
+      "value": "4C7A13F0",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 2,
+      "id": "__VIEWSTATEENCRYPTED",
+      "name": "__VIEWSTATEENCRYPTED",
+      "type": "hidden",
+      "value": "",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 3,
+      "id": "__EVENTVALIDATION",
+      "name": "__EVENTVALIDATION",
+      "type": "hidden",
+      "value": "bsfkjP/Z6k5Yek54PPtFMhcwuuuWqN3taFsSdSrKJhdT73CNJAs2U8P+7DLsh+dbk3RBGs52gRZzi3EGF6WobZtS1FQ9qaUKmWYbyxLTtxi8BP7bl982wGPteuo6ohliMY3lMfjfijeI0DGSUhSW5aU8cbJFf6/PPv2bmG8QdKVnx4jJOkRDokrZfon+ONbJqSD9o53xw2i35ZeayOvJI+GRbztDFkosUBMe66c4LZ4=",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 4,
+      "id": "hdnUserNum",
+      "name": "Footer$hdnUserNum",
+      "type": "hidden",
+      "value": "0",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 5,
+      "id": "hdnUserId",
+      "name": "Footer$hdnUserId",
+      "type": "hidden",
+      "value": "RTOPETE@ADMIN",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 6,
+      "id": "Action",
+      "name": "Action",
+      "type": "hidden",
+      "value": "",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 7,
+      "id": "hdnDocMgmtAppUri",
+      "name": "hdnDocMgmtAppUri",
+      "type": "hidden",
+      "value": "https://devservices.practicevelocity.com/documentapp/home?sessionId=69bb654b-1b19-46c7-803f-a30d7e1341b6&basePage=bulkscanning",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    },
+    {
+      "index": 8,
+      "id": "hdnUserPk",
+      "name": "hdnUserPk",
+      "type": "hidden",
+      "value": "9c0c67c4-b1ec-f011-8a37-00505682acad",
+      "placeholder": "",
+      "disabled": false,
+      "className": "",
+      "visible": false
+    }
+  ],
+  "selects": [],
+  "textareas": [],
+  "buttons": [],
+  "iframes": [
+    {
+      "index": 0,
+      "id": "content",
+      "name": "",
+      "src": "https://devservices.practicevelocity.com/documentapp/home?sessionId=69bb654b-1b19-46c7-803f-a30d7e1341b6&basePage=bulkscanning"
+    }
+  ]
+}

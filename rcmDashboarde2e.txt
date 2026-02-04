@@ -1,0 +1,11 @@
+RCM Dashboard e2e test
+
+- Validate practice with no RCM dashboard permissions
+Login to PM and go to Logbook
+Select a practice with no rcm dashboard permissions (practice name:TEST2)
+Now go to Admin2 menu and validate RCM dashboard is not displayed in the menu
+
+- Validate practice with RCM dashboard permissions
+Login to PM and go to Logbook
+Select a practice with rcm dashboard permissions (practice name:LOWUC)
+Now go to Admin2 menu and validate RCM dashboard is displayed in the menu 
