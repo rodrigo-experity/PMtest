@@ -1,0 +1,4 @@
+
+Verifying TIFF/TIF files:
+  ✓ test-document.tiff (28.51 KB)
+  ✓ test-document.tif (28.51 KB)
