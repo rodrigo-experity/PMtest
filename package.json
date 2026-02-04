@@ -22,6 +22,8 @@
     "test:allure:history": "npm run test && npm run allure:generate:history && npm run allure:open",
     "test:chromium:allure": "npm run test:chromium && npm run allure:serve",
     "test:chromium:history": "npm run test:chromium && npm run allure:generate:history && npm run allure:open",
+    "test:chromium:publish": "npm run test:chromium && npm run allure:generate:history && npm run allure:publish",
+    "test:chromium:screenshot": "npm run test:chromium && npm run allure:generate:history && npm run allure:screenshot",
     "test:dev": "npm run allure:env development && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
     "test:staging": "npm run allure:env staging && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
     "test:prod": "npm run allure:env production && npm run test:chromium && npm run allure:generate:history && npm run allure:open",
