@@ -1,0 +1,23 @@
+✅ Navigated to Bulk Scanning page
+📤 Uploading document...
+💾 Clicking Save to commit upload...
+✅ Save button clicked in overlay dialog
+✅ Document saved successfully
+🖱️ Selecting document from left panel...
+✅ Document selected
+✅ Document preview visible
+
+📋 TC5: Checking if Description, Category, Notes are enabled...
+  Description field disabled: false
+  Category field disabled: false
+  Notes field disabled: false
+✅ TC5 PASSED: Description, Category, and Notes are enabled after selecting document
+
+📋 TC6: Selecting Description and Category...
+  ✅ Description selected
+  ✅ Category selected
+  DOB field disabled: false
+  Last Name field disabled: false
+✅ TC6 PASSED: Last Name and DOB fields are enabled after selecting Description & Category
+
+✅ TC5-6 completed: Field enablement workflow validated
