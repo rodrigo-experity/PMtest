@@ -1,0 +1,3 @@
+✅ Login successful
+✅ Navigated to Log Book
+✅ John RTEST (Male) registered successfully

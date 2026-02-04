@@ -1,0 +1,5 @@
+
+Verifying PDF files:
+  ✓ test-document.pdf (71.61 KB)
+  ✓ document1.pdf (71.61 KB)
+  ✓ document2.pdf (71.61 KB)

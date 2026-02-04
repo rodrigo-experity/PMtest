@@ -1,0 +1,5 @@
+✅ Navigated to Bulk Scanning page
+📊 Initial document counter value: 554
+Uploading test files...
+✅ Files uploaded to dialog
+⚠️ Dialog Save button found but not clickable
