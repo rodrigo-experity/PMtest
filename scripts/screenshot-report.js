@@ -2,16 +2,61 @@ const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 const { execSync } = require('child_process');
+const http = require('http');
+const { createReadStream } = require('fs');
 
 /**
  * Script to take a screenshot of the Allure report
- * Opens the report, waits for it to load, and captures a screenshot
+ * Starts a local HTTP server, opens the report, waits for it to load, and captures a screenshot
  */
 
 const REPORT_DIR = 'allure-report';
 const SCREENSHOTS_DIR = 'report-screenshots';
+const PORT = 8765;
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-').split('T')[0];
 const screenshotPath = path.join(SCREENSHOTS_DIR, `allure-report-${timestamp}.png`);
+
+// Simple HTTP server to serve static files
+function createServer(rootDir) {
+  return http.createServer((req, res) => {
+    let filePath = path.join(rootDir, req.url === '/' ? 'index.html' : req.url);
+
+    // Security: prevent directory traversal
+    if (!filePath.startsWith(rootDir)) {
+      res.writeHead(403);
+      res.end('Forbidden');
+      return;
+    }
+
+    const ext = path.extname(filePath);
+    const contentTypes = {
+      '.html': 'text/html',
+      '.js': 'text/javascript',
+      '.css': 'text/css',
+      '.json': 'application/json',
+      '.png': 'image/png',
+      '.jpg': 'image/jpeg',
+      '.svg': 'image/svg+xml',
+    };
+
+    const contentType = contentTypes[ext] || 'application/octet-stream';
+
+    fs.readFile(filePath, (err, content) => {
+      if (err) {
+        if (err.code === 'ENOENT') {
+          res.writeHead(404);
+          res.end('Not found');
+        } else {
+          res.writeHead(500);
+          res.end('Server error: ' + err.code);
+        }
+      } else {
+        res.writeHead(200, { 'Content-Type': contentType });
+        res.end(content);
+      }
+    });
+  });
+}
 
 async function takeScreenshot() {
   console.log('\n📸 Taking screenshot of Allure report...\n');
@@ -28,11 +73,19 @@ async function takeScreenshot() {
     fs.mkdirSync(SCREENSHOTS_DIR, { recursive: true });
   }
 
-  const reportPath = path.resolve(REPORT_DIR, 'index.html');
-  const reportUrl = `file:///${reportPath.replace(/\\/g, '/')}`;
+  // Start HTTP server
+  const reportPath = path.resolve(REPORT_DIR);
+  const server = createServer(reportPath);
 
-  console.log(`📄 Opening report: ${reportPath}`);
-  console.log(`🌐 URL: ${reportUrl}\n`);
+  await new Promise((resolve) => {
+    server.listen(PORT, () => {
+      console.log(`🌐 Started local server at http://localhost:${PORT}`);
+      resolve();
+    });
+  });
+
+  const reportUrl = `http://localhost:${PORT}`;
+  console.log(`📄 Report URL: ${reportUrl}\n`);
 
   let browser;
   try {
@@ -105,6 +158,7 @@ async function takeScreenshot() {
     });
 
     await browser.close();
+    server.close();
 
     console.log(`\n✅ Screenshot saved successfully!`);
     console.log(`📄 File: ${screenshotPath}`);
@@ -120,6 +174,7 @@ async function takeScreenshot() {
   } catch (error) {
     console.error('\n❌ Error taking screenshot:', error.message);
     if (browser) await browser.close();
+    server.close();
     process.exit(1);
   }
 }
