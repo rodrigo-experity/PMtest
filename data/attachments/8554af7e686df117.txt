@@ -1,0 +1,11 @@
+Looking for Upload button...
+Upload button visible: true
+Clicking Upload button...
+Looking for file input after clicking Upload...
+File inputs found: 1
+✅ File input appeared after clicking Upload!
+Uploading: C:\Users\Rodrigo.Topete\Documents\PMtest\fixtures\documents\test-document.pdf
+✅ Upload attempted!
+📦 Dialog/Modal appeared
+  Visible: true
+  File inputs in dialog: 1
