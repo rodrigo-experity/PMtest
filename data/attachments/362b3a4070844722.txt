@@ -1,4 +1,0 @@
-
-Verifying JPEG/JPG files:
-  ✓ test-image.jpg (54.02 KB)
-  ✓ test-image.jpeg (54.02 KB)
