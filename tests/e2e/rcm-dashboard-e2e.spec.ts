@@ -41,7 +41,7 @@ interface PageObjects {
   rcmDashboardPage: RCMDashboardPage;
 }
 
-test.describe('RCM Dashboard E2E Permission Validation', () => {
+test.describe('RCM Dashboard E2E', () => {
   let pages: PageObjects;
 
   test.beforeEach(async ({ page }) => {
