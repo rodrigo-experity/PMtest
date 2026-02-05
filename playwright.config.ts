@@ -26,7 +26,7 @@ export default defineConfig({
     ['html'],
     ['allure-playwright', {
       outputFolder: 'allure-results',
-      detail: true,
+      detail: false, // Disable detailed steps to prevent exposing sensitive data like passwords
       suiteTitle: false, // Use describe blocks as suite names instead of file paths
     }]
   ],
