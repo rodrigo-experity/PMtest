@@ -8,7 +8,7 @@
 ✅ LogDetail page loaded
 
 📋 Step 3: Filling patient search parameters...
-✅ Patient data: Emily RTEST, DOB: 07/08/1980
+✅ Patient data: Emily RTEST, DOB: 08/11/1986
 
 📋 Step 4-5: Verifying and registering patient...
 ✅ Patient verified and registered - navigated to patient details page
@@ -32,5 +32,5 @@
 ✅ ✅ ✅ PATIENT REGISTRATION COMPLETED SUCCESSFULLY ✅ ✅ ✅
 
 Registered Patient: Emily RTEST (Female)
-Date of Birth: 07/08/1980
-Registration completed at: 2/5/2026, 11:24:33 AM
+Date of Birth: 08/11/1986
+Registration completed at: 2/5/2026, 11:36:27 AM
