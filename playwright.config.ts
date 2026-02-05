@@ -28,11 +28,6 @@ export default defineConfig({
       outputFolder: 'allure-results',
       detail: true,
       suiteTitle: false, // Use describe blocks as suite names instead of file paths
-      environmentInfo: {
-        'Test Environment': process.env.TEST_ENV || 'development',
-        'Browser': 'Chromium',
-        'Timezone': Intl.DateTimeFormat().resolvedOptions().timeZone,
-      }
     }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
