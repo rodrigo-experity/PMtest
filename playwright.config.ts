@@ -23,7 +23,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html'],
+    ['html', { open: 'never' }], // Don't auto-open HTML report to allow publish scripts to continue
     ['allure-playwright', {
       outputFolder: 'allure-results',
       detail: false, // Disable detailed steps to prevent exposing sensitive data like passwords
