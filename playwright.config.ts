@@ -27,7 +27,7 @@ export default defineConfig({
     ['allure-playwright', {
       outputFolder: 'allure-results',
       detail: true,
-      suiteTitle: true,
+      suiteTitle: false, // Use describe blocks as suite names instead of file paths
       environmentInfo: {
         'Test Environment': process.env.TEST_ENV || 'development',
         'Browser': 'Chromium',
