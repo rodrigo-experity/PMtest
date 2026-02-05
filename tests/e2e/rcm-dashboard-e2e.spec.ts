@@ -104,10 +104,6 @@ test.describe('RCM Dashboard E2E Permission Validation', () => {
     const rcmExists = await pages.admin2Page.rcmDashboardMenuItemExists();
     console.log(`🔍 Debug: RCM Dashboard element exists in DOM: ${rcmExists}`);
 
-    // Take screenshot for debugging
-    await page.screenshot({ path: `rcm-dashboard-scenario2-${TEST_DATA.practiceWithRcm.practice}.png`, fullPage: true });
-    console.log(`📸 Screenshot saved: rcm-dashboard-scenario2-${TEST_DATA.practiceWithRcm.practice}.png`);
-
     const isRcmVisibleWithPermissions = await pages.admin2Page.isRcmDashboardMenuItemVisible();
     console.log(`🔍 Debug: RCM Dashboard visible: ${isRcmVisibleWithPermissions}`);
 
@@ -145,10 +141,6 @@ test.describe('RCM Dashboard E2E Permission Validation', () => {
     console.log(`🔍 Debug: Iframe visible: ${iframeValidation.isVisible}`);
     console.log(`🔍 Debug: Has name="rcmDashboard": ${iframeValidation.hasCorrectName}`);
     console.log(`🔍 Debug: Is Tableau iframe: ${iframeValidation.isTableauIframe}`);
-
-    // Take screenshot of RCM Dashboard page with iframe
-    await page.screenshot({ path: 'rcm-dashboard-iframe-validation.png', fullPage: true });
-    console.log('📸 Screenshot saved: rcm-dashboard-iframe-validation.png');
 
     // Assertions for iframe
     expect(iframeValidation.isPresent, 'RCM Dashboard iframe should be present').toBe(true);
@@ -228,10 +220,6 @@ test.describe('RCM Dashboard E2E Permission Validation', () => {
     // Validate the iframe error message
     console.log('\n📋 Step 6: Validating iframe error message...');
     const errorValidation = await pages.rcmDashboardPage.validateIframeErrorMessage();
-
-    // Take screenshot of the error state
-    await page.screenshot({ path: 'rcm-dashboard-error-message.png', fullPage: true });
-    console.log('📸 Screenshot saved: rcm-dashboard-error-message.png');
 
     // Assertions for error message visibility and content
     expect(errorValidation.isVisible, 'Error message should be visible when token endpoint fails').toBe(true);

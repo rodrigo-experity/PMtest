@@ -64,9 +64,6 @@ test.describe('Patient Registration Tests', () => {
     // Note: You'll need to update this based on what actually appears
     await page.waitForTimeout(2000);
 
-    // Take screenshot for reference
-    await page.screenshot({ path: 'patient-registration-form.png' });
-
     // Add assertions based on what appears after clicking
     // Example: Check if a modal or new page is displayed
     // await expect(page.locator('[data-testid="patient-form"]')).toBeVisible();
@@ -156,9 +153,6 @@ test.describe('Patient Registration Tests', () => {
 
     // Wait for registration to complete
     await page.waitForTimeout(3000);
-
-    // Take screenshot of result
-    await page.screenshot({ path: 'patient-registered-success.png' });
 
     // Verify registration was successful
     // Note: Update this based on actual success indicator

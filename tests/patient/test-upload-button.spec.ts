@@ -64,8 +64,5 @@ test('Test Upload Button Click', async ({ page }) => {
     }
   }
 
-  await page.screenshot({ path: 'upload-button-test.png', fullPage: true });
-  console.log('📸 Screenshot saved: upload-button-test.png');
-
   await page.pause();
 });

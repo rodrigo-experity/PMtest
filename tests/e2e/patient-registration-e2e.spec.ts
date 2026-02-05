@@ -279,11 +279,7 @@ async function verifyRegistrationSuccess(
     }
   }
 
-  // Take screenshot
   if (verbose) {
-    await page.screenshot({ path: 'patient-registration-success.png', fullPage: true });
-    console.log('📸 Screenshot saved: patient-registration-success.png');
-
     console.log('\n✅ ✅ ✅ PATIENT REGISTRATION COMPLETED SUCCESSFULLY ✅ ✅ ✅\n');
     console.log(`Registered Patient: ${patientData.firstName} ${TEST_DATA.lastName} (${patientData.sex})`);
     console.log(`Date of Birth: ${patientData.dob}`);
