@@ -8,7 +8,7 @@ import path from 'path';
  * All selectors are now in BulkScanningPage.ts
  */
 
-test.describe('Bulk Scanning - Test Case Validation', () => {
+test.describe('Bulk Scanning e2e', () => {
   let loginPage: LoginPage;
   let dashboardPage: DashboardPage;
   let bulkScanningPage: BulkScanningPage;
@@ -450,32 +450,8 @@ test.describe('Bulk Scanning - Test Case Validation', () => {
     console.log('\n✅ TC9 completed');
     console.log('ℹ️  Note: EMR/PM verification requires separate tests');
   });
-});
 
-test.describe('Bulk Scanning - File Type Validation', () => {
-  let loginPage: LoginPage;
-  let dashboardPage: DashboardPage;
-  let bulkScanningPage: BulkScanningPage;
-
-  test.beforeEach(async ({ page }) => {
-    loginPage = new LoginPage(page);
-    dashboardPage = new DashboardPage(page);
-    bulkScanningPage = new BulkScanningPage(page);
-
-    await loginPage.goto();
-    await loginPage.login(config.loginUsername, config.loginPassword);
-    await expect(dashboardPage.logoutButton).toBeVisible();
-    await bulkScanningPage.navigateToBulkScanning();
-    await bulkScanningPage.waitForPageLoad();
-  });
-
-  test.afterEach(async ({ page }) => {
-    const logoutButton = page.locator('#tdMenuBarItemlogout');
-    if (await logoutButton.isVisible({ timeout: 1000 }).catch(() => false)) {
-      await logoutButton.click();
-    }
-  });
-
+  // File Type Validation Tests
   const fileTypes = [
     { type: 'PDF', filename: 'test-document.pdf' },
     { type: 'JPEG', filename: 'test-image.jpeg' },
@@ -488,7 +464,14 @@ test.describe('Bulk Scanning - File Type Validation', () => {
   ];
 
   for (const fileType of fileTypes) {
-    test(`should successfully upload ${fileType.type} file`, async () => {
+    test(`should successfully upload ${fileType.type} file`, async ({ page }) => {
+      // Login and navigate for each file type test
+      await loginPage.goto();
+      await loginPage.login(config.loginUsername, config.loginPassword);
+      await expect(dashboardPage.logoutButton).toBeVisible();
+      await bulkScanningPage.navigateToBulkScanning();
+      await bulkScanningPage.waitForPageLoad();
+
       const testFile = path.join(process.cwd(), 'fixtures', 'documents', fileType.filename);
 
       console.log(`Uploading ${fileType.type} file...`);
