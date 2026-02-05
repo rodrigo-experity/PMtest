@@ -1,5 +1,0 @@
-✅ Navigated to Bulk Scanning page
-Uploading 5MB file to test file size limit validation...
-📋 Toast error notification: Unable to upload file.
-✅ TC4 PASSED: File size validation working - large file rejected
-✅ TC4 completed
