@@ -8,7 +8,7 @@
 ✅ LogDetail page loaded
 
 📋 Step 3: Filling patient search parameters...
-✅ Patient data: Lisa RTEST, DOB: 07/13/1986
+✅ Patient data: Lisa RTEST, DOB: 07/04/1995
 
 📋 Step 4-5: Verifying and registering patient...
 ✅ Patient verified and registered - navigated to patient details page
@@ -32,5 +32,5 @@
 ✅ ✅ ✅ PATIENT REGISTRATION COMPLETED SUCCESSFULLY ✅ ✅ ✅
 
 Registered Patient: Lisa RTEST (Female)
-Date of Birth: 07/13/1986
-Registration completed at: 2/5/2026, 10:29:12 AM
+Date of Birth: 07/04/1995
+Registration completed at: 2/5/2026, 11:08:52 AM

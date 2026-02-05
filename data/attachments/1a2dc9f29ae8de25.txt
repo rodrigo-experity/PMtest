@@ -1,11 +1,11 @@
 ✅ Navigated to Bulk Scanning page
-📊 Initial document counter value: 603
+📊 Initial document counter value: 613
 Uploading test files...
 ✅ Files uploaded to dialog
 ✅ Save button clicked in overlay dialog
 ✅ Save button clicked in upload dialog
-📊 Final document counter value: 606
-✅ Counter increased from 603 to 606 (+3)
+📊 Final document counter value: 616
+✅ Counter increased from 613 to 616 (+3)
 ✅ Document selected from left panel
 ✅ Document preview visible in center panel
 ✅ TC3 completed
