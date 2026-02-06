@@ -355,9 +355,12 @@ test.describe('Bulk Scanning e2e', () => {
 
       if (resultCount > 0 && await patientResult.isVisible().catch(() => false)) {
         console.log('✅ TC8 PASSED: Patient "TEST, JACK" found in search results');
-        await patientResult.click();
+
+        // Click the mat-expansion-panel that contains "TEST, JACK"
+        const expansionPanel = iframe.locator('mat-expansion-panel:has-text("TEST, JACK")').first();
+        await expansionPanel.click();
         await page.waitForTimeout(2000);
-        console.log('✅ Patient "TEST, JACK" selected');
+        console.log('✅ Patient "TEST, JACK" expansion panel clicked');
       } else {
         console.log('⚠️ Patient "TEST, JACK" not found in search results');
         console.log('   ℹ️  Test completed successfully - search workflow validated');
@@ -418,9 +421,12 @@ test.describe('Bulk Scanning e2e', () => {
 
     if (resultCount > 0 && await patientResult.isVisible().catch(() => false)) {
       console.log('✅ Patient "TEST, JACK" found');
-      await patientResult.click();
+
+      // Click the mat-expansion-panel that contains "TEST, JACK"
+      const expansionPanel = iframe.locator('mat-expansion-panel:has-text("TEST, JACK")').first();
+      await expansionPanel.click();
       await page.waitForTimeout(3000); // Wait longer for expansion panel to fully open
-      console.log('✅ Patient selected');
+      console.log('✅ Patient expansion panel clicked and opened');
 
       // Click +Pat Docs to associate document with patient visit
       console.log('📎 Clicking +Pat Docs to associate document with patient visit...');
