@@ -1,5 +1,0 @@
-✅ Navigated to Bulk Scanning page
-Uploading 5MB file to test file size limit validation...
-📋 Toast error notification: Document was successfully uploaded.
-⚠️  Error found but unexpected message: "Document was successfully uploaded."
-✅ TC4 completed
