@@ -8,13 +8,13 @@
 ✅ LogDetail page loaded
 
 📋 Step 3: Filling patient search parameters...
-✅ Patient data: Michael RTEST, DOB: 11/13/1992
+✅ Patient data: Mary RTEST, DOB: 06/06/1992
 
 📋 Step 4-5: Verifying and registering patient...
 ✅ Patient verified and registered - navigated to patient details page
 
 📋 Step 6: Filling patient information...
-✅ Patient info filled: Male, 123 test street, 85710, TUCSON
+✅ Patient info filled: Female, 123 test street, 85710, TUCSON
 
 📋 Step 7: Setting patient portal access...
 ✅ Patient portal access: Yes
@@ -31,6 +31,6 @@
 
 ✅ ✅ ✅ PATIENT REGISTRATION COMPLETED SUCCESSFULLY ✅ ✅ ✅
 
-Registered Patient: Michael RTEST (Male)
-Date of Birth: 11/13/1992
-Registration completed at: 2/6/2026, 12:57:44 PM
+Registered Patient: Mary RTEST (Female)
+Date of Birth: 06/06/1992
+Registration completed at: 2/6/2026, 1:12:59 PM
