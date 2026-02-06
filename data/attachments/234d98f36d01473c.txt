@@ -1,0 +1,3 @@
+
+Verifying JFIF files:
+  ✓ test-image.jfif (54.02 KB)

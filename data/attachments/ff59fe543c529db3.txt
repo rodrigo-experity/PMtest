@@ -1,0 +1,3 @@
+
+Verifying PNG files:
+  ✓ test-image.png (28.51 KB)
