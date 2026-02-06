@@ -15,6 +15,6 @@
   ✅ Search button clicked
   ⏳ Waiting for search results...
 ✅ TC8 PASSED: Patient "TEST, JACK" found in search results
-✅ Patient "TEST, JACK" selected
+✅ Patient "TEST, JACK" expansion panel clicked
 
 ✅ TC8 completed
