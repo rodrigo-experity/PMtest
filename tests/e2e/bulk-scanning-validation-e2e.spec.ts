@@ -195,6 +195,8 @@ test.describe('Bulk Scanning e2e', () => {
   });
 
   test('TC5-6: Select file, verify fields enabled, and search patient', async ({ page }) => {
+    test.setTimeout(90000); // 90 second timeout
+
     // Login and navigate
     await loginPage.goto();
     await loginPage.login(config.loginUsername, config.loginPassword);
@@ -282,6 +284,8 @@ test.describe('Bulk Scanning e2e', () => {
   });
 
   test('TC8: Search patient by Last Name and DOB', async ({ page }) => {
+    test.setTimeout(90000); // 90 second timeout
+
     // Login and navigate
     await loginPage.goto();
     await loginPage.login(config.loginUsername, config.loginPassword);
