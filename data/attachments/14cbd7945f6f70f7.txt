@@ -8,13 +8,13 @@
 ✅ LogDetail page loaded
 
 📋 Step 3: Filling patient search parameters...
-✅ Patient data: Robert RTEST, DOB: 11/13/1998
+✅ Patient data: Lisa RTEST, DOB: 10/03/1983
 
 📋 Step 4-5: Verifying and registering patient...
 ✅ Patient verified and registered - navigated to patient details page
 
 📋 Step 6: Filling patient information...
-✅ Patient info filled: Male, 123 test street, 85710, TUCSON
+✅ Patient info filled: Female, 123 test street, 85710, TUCSON
 
 📋 Step 7: Setting patient portal access...
 ✅ Patient portal access: Yes
@@ -31,6 +31,6 @@
 
 ✅ ✅ ✅ PATIENT REGISTRATION COMPLETED SUCCESSFULLY ✅ ✅ ✅
 
-Registered Patient: Robert RTEST (Male)
-Date of Birth: 11/13/1998
-Registration completed at: 2/9/2026, 8:18:45 AM
+Registered Patient: Lisa RTEST (Female)
+Date of Birth: 10/03/1983
+Registration completed at: 2/9/2026, 8:48:44 AM
