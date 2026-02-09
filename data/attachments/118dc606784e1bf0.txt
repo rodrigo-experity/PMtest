@@ -1,0 +1,8 @@
+✓ test-document.pdf has correct extension: .pdf
+✓ test-image.jpg has correct extension: .jpg
+✓ test-image.jpeg has correct extension: .jpeg
+✓ test-image.png has correct extension: .png
+✓ test-image.gif has correct extension: .gif
+✓ test-image.jfif has correct extension: .jfif
+✓ test-document.tiff has correct extension: .tiff
+✓ test-document.tif has correct extension: .tif
