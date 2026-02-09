@@ -1,0 +1,3 @@
+✅ Login successful
+✅ Navigated to Log Book
+✅ Sarah RTEST (Female) registered successfully

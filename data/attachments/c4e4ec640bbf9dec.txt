@@ -1,0 +1,3 @@
+✅ Login successful
+✅ Navigated to Log Book
+✅ Emily RTEST (Female) registered successfully
