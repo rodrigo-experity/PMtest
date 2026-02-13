@@ -8,7 +8,7 @@
 ✅ LogDetail page loaded
 
 📋 Step 3: Filling patient search parameters...
-✅ Patient data: James RTEST, DOB: 05/07/1980
+✅ Patient data: David RTEST, DOB: 05/08/1996
 
 📋 Step 4-5: Verifying and registering patient...
 ✅ Patient verified and registered - navigated to patient details page
@@ -31,6 +31,6 @@
 
 ✅ ✅ ✅ PATIENT REGISTRATION COMPLETED SUCCESSFULLY ✅ ✅ ✅
 
-Registered Patient: James RTEST (Male)
-Date of Birth: 05/07/1980
-Registration completed at: 2/13/2026, 3:31:08 PM
+Registered Patient: David RTEST (Male)
+Date of Birth: 05/08/1996
+Registration completed at: 2/13/2026, 4:37:42 PM
