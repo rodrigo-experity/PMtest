@@ -1,0 +1,3 @@
+✅ Login successful
+✅ Navigated to Log Book
+✅ Mary RTEST (Female) registered successfully
