@@ -1,0 +1,5 @@
+✅ Navigated to Bulk Scanning page
+Uploading 5MB file to test file size limit validation...
+📋 Error message in dialog: No scanners detected. Please attach a scanner and refresh the page.
+⚠️  Error found but unexpected message: "No scanners detected. Please attach a scanner and refresh the page."
+✅ TC4 completed
